@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if errors %}
+        <small style="color:blue;" >
+            {{ errors }}
+        </small>
+    {% endif %}
+
+    <input type="submit" value="s'inscrire">
+</form>
+
+{% endblock %}
