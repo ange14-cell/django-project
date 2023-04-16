@@ -125,7 +125,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'account.Shopper'
-LOGIN_REDIRECT_URL = "product"
+LOGIN_REDIRECT_URL = 'product'
+LOGOUT_REDIRECT_URL = 'product'
 LOGIN_URL = "compte/login"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

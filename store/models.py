@@ -42,7 +42,6 @@ class Cart(models.Model):
     def delete(self, *args, **kwargs):
         for order in self.orders.all():
             order.ordered = True
-            order.ordered_date = timezone.now()
             order.save()
 
         self.orders.clear()
